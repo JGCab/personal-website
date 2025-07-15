@@ -1,0 +1,42 @@
+:host {
+  --bg        : #0060df;      
+  --bg-hover  : #1a73e8;
+  --bg-alt    : transparent;        
+  --color     : #fff;
+  --color-alt : #0060df;
+  --radius    : 18px;
+  --padding   : .55em 1.4em;
+  --ripple    : rgba(255,255,255,.3);
+  display:inline-block;
+}
+
+button {
+  all:unset;                        
+  display:inline-flex;
+  align-items:center;
+  gap:.45em;
+  cursor:pointer;
+  border-radius:var(--radius);
+  padding:var(--padding);
+  font:500 1rem/1 system-ui,sans-serif;
+  transition:background .15s,box-shadow .15s;
+  background:var(--bg);
+  color:var(--color);
+  position:relative;
+  overflow:hidden;                  
+}
+
+button:hover   { background:var(--bg-hover); }
+button:focus   { outline:2px solid Highlight; outline-offset:2px; }
+
+:host([variant="secondary"]) button{
+  background:var(--bg-alt);
+  color:var(--color-alt);
+  border:1px solid currentColor;
+}
+
+
+:host([disabled]) button{
+  cursor:not-allowed;
+  opacity:.55;
+}

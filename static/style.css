@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    font:500 1rem/1 system-ui,sans-serif;
+}
+
+div#main {
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
