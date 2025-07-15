@@ -7,7 +7,7 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.Handle("GET /", http.FileServer(http.Dir("./client/")))
+	mux.Handle("GET /", http.FileServer(http.Dir("./static/")))
 
 	fmt.Println("Server: http://localhost:8080")
 

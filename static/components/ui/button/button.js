@@ -6,9 +6,7 @@ export class JButton extends JComponent {
   static observed = ["disabled", "variant"]
   
   ready() {
-    console.log(this.shadowRoot.innerHTML)
     this.btn = this.shadowRoot.querySelector("button")
-    console.log(this.btn)
     this.btn.addEventListener('click',  (e) => {
       if (this.disabled) return
 
